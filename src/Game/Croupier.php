@@ -6,10 +6,18 @@ namespace Vz\Game;
 use Vz\Game;
 use Vz\Game\Deck\Card;
 
+/**
+ * Class Croupier responsible for shuffling and dealing cards.
+ *
+ * @package Vz\Game
+ */
 class Croupier implements CroupierInterface
 {
 
+    /** @var array $_cards */
     protected $_cards = array();
+
+    /** @var Game $_game */
     protected $_game;
 
     /**
@@ -34,7 +42,7 @@ class Croupier implements CroupierInterface
     }
 
     /**
-     * Prints all cards in croupier deck
+     * Prints all cards handed by croupier
      */
     public function showCards()
     {
@@ -44,6 +52,8 @@ class Croupier implements CroupierInterface
     }
 
     /**
+     * Returns number of cards currently in Croupier hand.
+     *
      * @return array
      */
     public function getCards()
@@ -52,7 +62,7 @@ class Croupier implements CroupierInterface
     }
 
     /**
-     * Shuffle game card deck
+     * Shuffle game card deck and make sure there no cards in sequence anymore.
      */
     public function shuffleDeck()
     {
@@ -79,7 +89,11 @@ class Croupier implements CroupierInterface
     }
 
     /**
-     * Deal cards to players
+     * Deal cards to players.
+     * Players get x number of cards defined in Game.
+     * There will x iteration. Player gets 1 card per iteration.
+     * Card given to player is removed from deck.
+     *
      */
     public function dealCards()
     {

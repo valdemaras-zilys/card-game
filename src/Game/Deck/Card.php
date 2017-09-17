@@ -2,7 +2,10 @@
 
 namespace Vz\Game\Deck;
 
-
+/**
+ * Class Card
+ * @package Vz\Game\Deck
+ */
 class Card
 {
     /** @var  string $_suit */
