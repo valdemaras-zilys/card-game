@@ -5,6 +5,10 @@ namespace Vz\Test\Game\Deck;
 use PHPUnit\Framework\TestCase;
 use Vz\Game\Deck\Card;
 
+/**
+ * Class CardTest
+ * @package Vz\Test\Game\Deck
+ */
 class CardTest extends TestCase
 {
     /**

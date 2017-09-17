@@ -4,6 +4,12 @@ namespace Vz;
 
 use Vz\Game\Player;
 
+/**
+ * Class Game defines game rules such as number of players and cards per player.
+ * Also registers all players.
+ *
+ * @package Vz
+ */
 class Game
 {
     const NUMBER_OF_PLAYERS = 4;
@@ -17,6 +23,16 @@ class Game
     public function __construct()
     {
         $this->_init();
+    }
+
+    /**
+     * Game destructor.
+     */
+    public function __destruct()
+    {
+        foreach ($this->_players as $index => $player) {
+            echo " ⓘ Player {$player->getName()} left game\n";
+        }
     }
 
     protected function _init()

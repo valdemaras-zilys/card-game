@@ -5,6 +5,12 @@ namespace Vz\Game;
 
 use Vz\Game\Deck\Card;
 
+/**
+ * Class Deck describes a deck of cards and it's perfect sequence.
+ * When created is initialized and populated with cards i perfect sequence.
+ *
+ * @package Vz\Game
+ */
 class Deck
 {
     const LABEL_ACE = 'A';
@@ -35,11 +41,13 @@ class Deck
     const VALUE_QUEEN = 12;
     const VALUE_KING = 13;
 
+
     const SUIT_HEARTS = '♥';
     const SUIT_CLUBS = '♣';
     const SUIT_SPADES = '♠';
     const SUIT_DIAMONDS = '♦';
 
+    /** @var array $suits list of suits */
     protected static $suits = [
         self::SUIT_HEARTS,
         self::SUIT_CLUBS,
@@ -47,6 +55,7 @@ class Deck
         self::SUIT_DIAMONDS
     ];
 
+    /** @var array $_values list values*/
     protected $_values = [
         ['value' => self::VALUE_ACE, 'label' => self::LABEL_ACE],
         ['value' => self::VALUE_TWO, 'label' => self::LABEL_TWO],
@@ -65,7 +74,7 @@ class Deck
 
 
     /** @var array $_cards */
-    protected $_cards = array();
+    protected $_cards = [];
 
     /**
      * Deck constructor.
@@ -73,12 +82,11 @@ class Deck
     public function __construct()
     {
         $this->_init();
-
     }
 
 
     /**
-     * Generate deck cards in initial sequence
+     * Generate card deck in initial sequence
      */
     protected function _init()
     {
@@ -91,6 +99,7 @@ class Deck
     }
 
     /**
+     * Returns list for cards in their initial perfect sequence
      * @return array
      */
     public function getCards()

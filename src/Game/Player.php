@@ -2,9 +2,12 @@
 
 namespace Vz\Game;
 
-
 use Vz\Game\Deck\Card;
 
+/**
+ * Class Player
+ * @package Vz\Game
+ */
 class Player implements PlayerInterface
 {
     protected $_name = '';
@@ -21,7 +24,7 @@ class Player implements PlayerInterface
 
 
     /**
-     * Print card labels
+     * Print labels of all cards handed by player.
      */
     public function showCards()
     {
@@ -48,6 +51,8 @@ class Player implements PlayerInterface
     }
 
     /**
+     * Append given card to players card list.
+     *
      * @param Card $card
      */
     public function addCard(Card $card)

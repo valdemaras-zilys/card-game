@@ -6,6 +6,10 @@ use PHPUnit\Framework\TestCase;
 use Vz\Game;
 use Vz\Game\Croupier;
 
+/**
+ * Class CroupierTest
+ * @package Vz\Test\Game
+ */
 class CroupierTest extends TestCase
 {
 

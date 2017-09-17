@@ -6,6 +6,10 @@ use PHPUnit\Framework\TestCase;
 use Vz\Game\Deck\Card;
 use Vz\Game\Player;
 
+/**
+ * Class PlayerTest
+ * @package Vz\Test\Game
+ */
 class PlayerTest extends TestCase
 {
 
